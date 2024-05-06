@@ -1,0 +1,20 @@
+<div class="text-center mt-3 mb-3">
+  <form>
+    <input class="rounded" 
+    type="search" 
+    placeholder="search..." 
+    autofocus
+    (keyup)="onKeyUp($event)"
+    >
+  </form>
+</div>
+
+
+<app-photos [photos]="photos | filterbyDescription: filter">
+
+</app-photos>
+
+<app-load-button 
+(click)="load()"
+ [hasMore]="hasMore">
+</app-load-button>
